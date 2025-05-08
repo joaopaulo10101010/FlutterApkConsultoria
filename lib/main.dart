@@ -14,7 +14,7 @@ class Atm extends StatefulWidget {
 class _AtmState extends State<Atm> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.lightBlueAccent,
+    return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(backgroundColor: Colors.green,
                      title: Text("ATM Consultoria",style: TextStyle(color: Colors.white),),
                      ), 
