@@ -1,3 +1,4 @@
+import 'package:atmapk/views/empresa.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class Atm extends StatefulWidget {
 
 class _AtmState extends State<Atm> {
   void redirecionarEmpresa(){
-    
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Empresa()));
   }
   @override
   Widget build(BuildContext context) {
