@@ -12,6 +12,9 @@ class Atm extends StatefulWidget {
 }
 
 class _AtmState extends State<Atm> {
+  void redirecionarEmpresa(){
+    
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
@@ -25,7 +28,7 @@ class _AtmState extends State<Atm> {
             children: [Image.asset("imagens/menu_empresa.png"),SizedBox(width: 20,),Image.asset("imagens/menu_servico.png")],),
           SizedBox(height: 20,),
           Row(mainAxisAlignment: MainAxisAlignment.center,
-            children: [Image.asset("imagens/menu_cliente.png"),SizedBox(width: 20,),Image.asset("imagens/menu_contato.png")],)],),),
+            children: [GestureDetector(child: Image.asset("imagens/menu_cliente.png"), onTap: redirecionarEmpresa,),SizedBox(width: 20,),Image.asset("imagens/menu_contato.png")],)],),),
       );
   }
 }
