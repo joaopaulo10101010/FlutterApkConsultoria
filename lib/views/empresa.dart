@@ -10,8 +10,8 @@ class Empresa extends StatefulWidget {
 class _EmpresaState extends State<Empresa> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(backgroundColor: Colors.green,
-                     title: Text("Empresa",style: TextStyle(color: Colors.redAccent),),
+    return Scaffold(appBar: AppBar(backgroundColor: const Color.fromARGB(255, 255, 87, 9),
+                     title: Text("Empresa",style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),),
                      )
                      
                      

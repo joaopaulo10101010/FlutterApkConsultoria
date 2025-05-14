@@ -1,4 +1,7 @@
+import 'package:atmapk/views/clientes.dart';
+import 'package:atmapk/views/contato.dart';
 import 'package:atmapk/views/empresa.dart';
+import 'package:atmapk/views/servicos.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +19,18 @@ class _AtmState extends State<Atm> {
   void redirecionarEmpresa(){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>Empresa()));
   }
+  void redirecionarCliente(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Clientes()));
+  }
+  void redirecionarServico(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Servicos()));
+  }
+  void redirecionarContato(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Contato()));
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
@@ -26,10 +41,10 @@ class _AtmState extends State<Atm> {
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [Image.asset("imagens/logo.png"),SizedBox(height: 30,),
           Row(mainAxisAlignment: MainAxisAlignment.center,
-            children: [Image.asset("imagens/menu_empresa.png"),SizedBox(width: 20,),Image.asset("imagens/menu_servico.png")],),
+            children: [GestureDetector(child: Image.asset("imagens/menu_empresa.png"), onTap: redirecionarEmpresa,),SizedBox(width: 20,),GestureDetector(child: Image.asset("imagens/menu_servico.png"), onTap: redirecionarServico,)],),
           SizedBox(height: 20,),
           Row(mainAxisAlignment: MainAxisAlignment.center,
-            children: [GestureDetector(child: Image.asset("imagens/menu_cliente.png"), onTap: redirecionarEmpresa,),SizedBox(width: 20,),Image.asset("imagens/menu_contato.png")],)],),),
+            children: [GestureDetector(child: Image.asset("imagens/menu_cliente.png"), onTap: redirecionarCliente,),SizedBox(width: 20,),GestureDetector(child: Image.asset("imagens/menu_contato.png"), onTap: redirecionarContato,),],)],),),
       );
   }
 }
