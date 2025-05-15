@@ -41,10 +41,10 @@ class _AtmState extends State<Atm> {
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [Image.asset("imagens/logo.png"),SizedBox(height: 30,),
           Row(mainAxisAlignment: MainAxisAlignment.center,
-            children: [GestureDetector(child: Image.asset("imagens/menu_empresa.png"), onTap: redirecionarEmpresa,),SizedBox(width: 20,),GestureDetector(child: Image.asset("imagens/menu_servico.png"), onTap: redirecionarServico,)],),
+            children: [GestureDetector(onTap: redirecionarEmpresa, child: Image.asset("imagens/menu_empresa.png"),),SizedBox(width: 20,),GestureDetector(onTap: redirecionarServico, child: Image.asset("imagens/menu_servico.png"),)],),
           SizedBox(height: 20,),
           Row(mainAxisAlignment: MainAxisAlignment.center,
-            children: [GestureDetector(child: Image.asset("imagens/menu_cliente.png"), onTap: redirecionarCliente,),SizedBox(width: 20,),GestureDetector(child: Image.asset("imagens/menu_contato.png"), onTap: redirecionarContato,),],)],),),
+            children: [GestureDetector(onTap: redirecionarCliente,child: Image.asset("imagens/menu_cliente.png"),),SizedBox(width: 20,),GestureDetector(onTap: redirecionarContato, child: Image.asset("imagens/menu_contato.png"),),],)],),),
       );
   }
 }
