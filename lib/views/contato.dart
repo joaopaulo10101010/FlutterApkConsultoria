@@ -15,6 +15,6 @@ class _ContatoState extends State<Contato> {
                      )
                      
                      
-                     ,);;
+                     ,);
   }
 }
